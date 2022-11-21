@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "UgpRUtJ7FhJK/V61Ph+2keABjoTJSv7+4K4ZH61TUtnCFvg+S6bku7gkRcvsgib6UiFMDzLJ46xxMSr+rw8V0w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Slava\\source\\repos\\Sharp\\2022_11_09_UDPChat_but_complex\\UDPChat_but_complex\\UDPChat_but_complex.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Slava\\.nuget\\packages\\extended.wpf.toolkit\\4.4.0\\extended.wpf.toolkit.4.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
