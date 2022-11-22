@@ -23,7 +23,9 @@ namespace UDPChat_but_complex
     /// </summary>
     public partial class MainWindow : Window
     {
+        private bool ShowIp = false;
         UdpClient udpClient = new UdpClient();
+        OptionDialog options = new OptionDialog();
         public MainWindow()
         {
             InitializeComponent();
@@ -72,7 +74,14 @@ namespace UDPChat_but_complex
             client.BeginReceive(MyReceiveCallback, client);
             Application.Current.Dispatcher.Invoke(() =>
             {
-                lbMessages.Items.Add(Encoding.ASCII.GetString(buffer));
+                if (ShowIp)
+                {
+                    lbMessages.Items.Add($"({client.Client.RemoteEndPoint.ToString()}) {Encoding.ASCII.GetString(buffer)}");
+                }
+                else
+                {
+                    lbMessages.Items.Add(Encoding.ASCII.GetString(buffer));
+                }
             });
         }
 
@@ -98,7 +107,18 @@ namespace UDPChat_but_complex
             SetStringDialog stringDialog = new SetStringDialog();
             stringDialog.ShowDialog();
 
+
             if (stringDialog.Text == string.Empty) return;
+            if (cbAdresses.Items.IndexOf(stringDialog.Text) != -1) return;
+
+            cbAdresses.Items.Insert(cbAdresses.Items.Count - 1, stringDialog.Text);
+            cbAdresses.SelectedIndex = cbAdresses.Items.Count - 2;
+        }
+
+        private void btOptions_Click(object sender, RoutedEventArgs e)
+        {
+            options.ShowDialog();
+            ShowIp = options.ShowIp;
         }
 
         // Plus file sending without broadcast.

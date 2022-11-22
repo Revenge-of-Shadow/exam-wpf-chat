@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UDPChat_but_complex"
         mc:Ignorable="d"
-        Title="Enter text." Height="80" Width="128">
+        Title="Enter text." Height="128" Width="256">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
