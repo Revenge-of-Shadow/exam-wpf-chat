@@ -77,7 +77,7 @@ namespace UDPChat_but_complex {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/UDPChat_but_complex;component/setstringdialog.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/UDPChat_but_complex;V1.0.0.0;component/setstringdialog.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\SetStringDialog.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

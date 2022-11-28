@@ -8,9 +8,12 @@
         Title="OptionDialog" Height="256" Width="256">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="2">
-            <StackPanel Orientation="Vertical">
                 <CheckBox x:Name="cbIps" Content="Show IP addresses"/>
-            </StackPanel>
+            <CheckBox x:Name="cbTim" Content="Update images automatically" Checked="cbTim_Checked" Unchecked="cbTim_Checked"/>
+                <StackPanel Orientation="Horizontal" Height="25">
+                    <TextBox x:Name="tbTim" Text="5" Width="20" Margin="4"/>
+                    <Label Content=" second(s) delay."/>
+                </StackPanel>
         </StackPanel>
     </Grid>
 </Window>

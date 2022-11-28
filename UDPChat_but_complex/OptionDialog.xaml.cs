@@ -20,9 +20,16 @@ namespace UDPChat_but_complex
     public partial class OptionDialog : Window { 
     
         public bool ShowIp { get => cbIps.IsChecked.Value;}
+        public bool AutoUpdateImages { get => cbTim.IsChecked.Value; }
+        public int UpdateInterval { get => Int32.Parse(tbTim.Text); }
         public OptionDialog()
         {
             InitializeComponent();
+        }
+
+        private void cbTim_Checked(object sender, RoutedEventArgs e)
+        {
+            tbTim.IsEnabled = AutoUpdateImages;
         }
     }
 }
