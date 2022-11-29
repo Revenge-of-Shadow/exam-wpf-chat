@@ -1,0 +1,2 @@
+UDPChat is a chat running on a typical UDP Client. It allows to transfer and store text and (almost) images over a local network. To use it, one must choose his address, port, enter a nickname and a password. Upon pressing button "Start" previous messages are loaded and user might chat freely by entering text in a field below and pressing "Send" button. Some insignificant features are possible to edit via "Options" window.
+I have nothing else to say.
